@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdxao01s2eu0n"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_m4873"]
+[ext_resource type="Texture2D" uid="uid://u76odr5yxvk4" path="res://greenshards-removebg-preview.png" id="2_ggabp"]
+[ext_resource type="Script" path="res://click.gd" id="3_xbt8w"]
+
+[node name="Death_message_for_level2" type="Node2D"]
+script = ExtResource("1_m4873")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 212.0
+offset_top = 161.0
+offset_right = 899.0
+offset_bottom = 306.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.694118, 0.513726, 0.156863, 1)
+theme_override_font_sizes/font_size = 100
+text = "Replay"
+icon = ExtResource("2_ggabp")
+script = ExtResource("3_xbt8w")
+
+[node name="MarginContainer4" type="MarginContainer" parent="."]
+offset_left = 935.0
+offset_top = 539.0
+offset_right = 1121.0
+offset_bottom = 616.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer4"]
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="MarginContainer4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.694118, 0.513726, 0.156863, 1)
+theme_override_font_sizes/font_size = 40
+text = "Quit"
+script = ExtResource("3_xbt8w")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+offset_top = 403.0
+offset_right = 1057.0
+offset_bottom = 493.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.694118, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "         Easy enough? Next time beware of this"
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.470588, 0.152941, 0.164706, 1)
+theme_override_font_sizes/font_size = 100
+text = "          GAME OVER"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer4/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

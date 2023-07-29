@@ -1,0 +1,102 @@
+[gd_scene load_steps=9 format=3 uid="uid://cct8552td77ue"]
+
+[ext_resource type="Script" path="res://Win.gd" id="1_du4ek"]
+[ext_resource type="Texture2D" uid="uid://u76odr5yxvk4" path="res://greenshards-removebg-preview.png" id="2_saeiu"]
+[ext_resource type="Texture2D" uid="uid://cew64rmxosq5m" path="res://blue_shard-removebg-preview.png" id="3_f7qt1"]
+[ext_resource type="Texture2D" uid="uid://csacr746xrage" path="res://diamons_c_shard-removebg-preview.png" id="4_j437s"]
+[ext_resource type="Texture2D" uid="uid://kw8jelfkfnx5" path="res://orange_pink_shard-removebg-preview.png" id="5_4fp5n"]
+[ext_resource type="Texture2D" uid="uid://oryi3rvoaf0o" path="res://red_shard-removebg-preview.png" id="6_gfnd5"]
+[ext_resource type="AudioStream" uid="uid://bg2arr5f750el" path="res://success-fanfare-trumpets-6185.mp3" id="7_qaxkq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hum7s"]
+bg_color = Color(0.858824, 0.490196, 0.270588, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Win" type="Node2D"]
+script = ExtResource("1_du4ek")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 186.0
+offset_top = 11.0
+offset_right = 1140.0
+offset_bottom = 477.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.141176, 0.301961, 0.14902, 1)
+theme_override_font_sizes/font_size = 100
+text = "Congratulations!
+ You complete 
+        it and won it!"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+offset_left = 104.0
+offset_top = 465.0
+offset_right = 298.0
+offset_bottom = 528.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.85098, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Quit"
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+offset_left = 812.0
+offset_top = 465.0
+offset_right = 1010.0
+offset_bottom = 528.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.85098, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Play Again"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Panel" type="Panel" parent="ParallaxBackground/ParallaxLayer"]
+offset_right = 5604.0
+offset_bottom = 4162.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hum7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Panel"]
+position = Vector2(445, 455)
+texture = ExtResource("2_saeiu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Panel"]
+position = Vector2(542, 494)
+texture = ExtResource("3_f7qt1")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Panel"]
+position = Vector2(650, 431)
+texture = ExtResource("4_j437s")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Panel"]
+position = Vector2(678, 537)
+texture = ExtResource("5_4fp5n")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Panel"]
+position = Vector2(433, 564)
+texture = ExtResource("6_gfnd5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_qaxkq")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/Button" to="." method="_on_button_pressed"]

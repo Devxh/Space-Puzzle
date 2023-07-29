@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://tknlhp8ncg7b"]
+
+[ext_resource type="Script" path="res://Complete_the_mission_death_gui.gd" id="1_cwdgg"]
+[ext_resource type="Script" path="res://n.gd" id="3_5mv8s"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_cwdgg")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 304.0
+offset_top = 73.0
+offset_right = 866.0
+offset_bottom = 393.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "You died!"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+offset_left = 382.0
+offset_top = 251.0
+offset_right = 866.0
+offset_bottom = 391.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.701961, 0.482353, 0.239216, 1)
+theme_override_font_sizes/font_size = 70
+text = "Is it easy?"
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+offset_left = 342.0
+offset_top = 468.0
+offset_right = 725.0
+offset_bottom = 665.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Respawn
+"
+script = ExtResource("3_5mv8s")
+
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/Button" to="." method="_on_button_pressed"]

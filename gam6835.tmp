@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://q60k64132der"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_62xs2"]
+[ext_resource type="Texture2D" uid="uid://b8m1d5788mibp" path="res://Sunduk_close.png" id="3_wr01f"]
+[ext_resource type="Texture2D" uid="uid://c26ox1n4wjoq0" path="res://Sunduk_open.png" id="3_y502s"]
+
+[sub_resource type="GDScript" id="GDScript_g1lks"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xkpc"]
+size = Vector2(78, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1g4ik"]
+atlas = ExtResource("3_wr01f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogkw4"]
+atlas = ExtResource("3_wr01f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgreb"]
+atlas = ExtResource("3_y502s")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_el8f7"]
+atlas = ExtResource("3_y502s")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3jsjv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g4ik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogkw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgreb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_el8f7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_62xs2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(21.5, 19)
+scale = Vector2(2.34375, 2.1875)
+texture = ExtResource("3_y502s")
+script = SubResource("GDScript_g1lks")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Sprite2D"]
+position = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_5xkpc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(188, 88)
+scale = Vector2(1.375, 1.4375)
+texture = ExtResource("3_y502s")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(188, 88)
+scale = Vector2(1.375, 1.4375)
+polygon = PackedVector2Array(8, -9.4, 9.7, 0, 14.8, 0, 16, 1.2, 16, 16, -16, 16, -16, -8, -14, -9.8, -14, -12, 8, -12)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(336, 144)
+scale = Vector2(2.34375, 2.1875)
+sprite_frames = SubResource("SpriteFrames_3jsjv")
+frame_progress = 0.350882
