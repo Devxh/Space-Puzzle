@@ -1,0 +1,190 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvyke2htrlp2t"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_oo5c1"]
+[ext_resource type="Texture2D" uid="uid://cjf8a2m203jrn" path="res://realspaceman.png" id="2_rylj0"]
+[ext_resource type="Script" path="res://camera.gd" id="3_4sfxh"]
+[ext_resource type="Texture2D" uid="uid://brq1fo31do4p0" path="res://easy/down_triangle-removebg-preview.png" id="4_ph0n2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkelu"]
+size = Vector2(201.748, 117.779)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxddx"]
+size = Vector2(201.81, 119.304)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(1513, -186)
+collision_layer = 2
+script = ExtResource("1_oo5c1")
+
+[node name="Sprite2D" type="Sprite2D" parent="player"]
+position = Vector2(-1425.56, 462.102)
+rotation = 1.43117
+scale = Vector2(0.208864, 0.168595)
+texture = ExtResource("2_rylj0")
+
+[node name="Camera2D" type="Camera2D" parent="player/Sprite2D"]
+position = Vector2(-563.449, 311.348)
+rotation = -1.56042
+scale = Vector2(5.93122, 4.78801)
+skew = 0.00554776
+script = ExtResource("3_4sfxh")
+
+[node name="Area2D" type="Area2D" parent="player"]
+position = Vector2(-1425.56, 462.102)
+rotation = 1.55794
+scale = Vector2(0.208864, 0.168595)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/Area2D"]
+position = Vector2(0.15387, 13.0437)
+shape = SubResource("RectangleShape2D_vkelu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(-1427.62, 462.142)
+rotation = 1.55794
+scale = Vector2(0.208864, 0.168595)
+shape = SubResource("RectangleShape2D_sxddx")
+
+[node name="obstacles" type="Node" parent="."]
+
+[node name="obstacle" type="Sprite2D" parent="obstacles"]
+position = Vector2(152.5, 74.75)
+scale = Vector2(0.766304, 0.708556)
+texture = ExtResource("4_ph0n2")
+
+[node name="Area2D" type="Area2D" parent="obstacles/obstacle" groups=["level_11_obstacle"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="obstacles/obstacle/Area2D"]
+polygon = PackedVector2Array(-34.5816, -34.9302, -1.95744, 21.5226, 30.6667, -34.9302)
+
+[node name="obstacle2" type="Sprite2D" parent="obstacles"]
+position = Vector2(154, 117)
+scale = Vector2(0.766304, 0.737968)
+texture = ExtResource("4_ph0n2")
+
+[node name="Area2D" type="Area2D" parent="obstacles/obstacle2" groups=["level_11_obstacle"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="obstacles/obstacle2/Area2D"]
+position = Vector2(-3.05176e-05, -1.35509)
+polygon = PackedVector2Array(-34.5816, -34.9302, -1.95744, 21.5226, 30.6667, -34.9302, 12.1707, -34.9302)
+
+[node name="obstacle3" type="Sprite2D" parent="obstacles"]
+position = Vector2(153, 159)
+scale = Vector2(0.766304, 0.737968)
+texture = ExtResource("4_ph0n2")
+
+[node name="Area2D" type="Area2D" parent="obstacles/obstacle3" groups=["level_11_obstacle"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="obstacles/obstacle3/Area2D"]
+position = Vector2(1.30498, 0)
+polygon = PackedVector2Array(-34.5816, -34.9302, -1.95744, 21.5226, 30.6667, -34.9302, 12.1707, -34.9302)
+
+[node name="obstacle4" type="Sprite2D" parent="obstacles"]
+position = Vector2(154, 202)
+scale = Vector2(0.766304, 0.737968)
+texture = ExtResource("4_ph0n2")
+
+[node name="Area2D" type="Area2D" parent="obstacles/obstacle4" groups=["level_11_obstacle"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="obstacles/obstacle4/Area2D"]
+position = Vector2(0, -1.35509)
+polygon = PackedVector2Array(-34.5816, -34.9302, -1.95744, 21.5226, 30.6667, -34.9302, 12.1707, -34.9302)
+
+[node name="obstacle5" type="Sprite2D" parent="obstacles"]
+position = Vector2(150.031, 330.627)
+rotation = -0.593412
+scale = Vector2(0.766304, 0.737968)
+texture = ExtResource("4_ph0n2")
+
+[node name="Area2D" type="Area2D" parent="obstacles/obstacle5" groups=["level_11_obstacle"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="obstacles/obstacle5/Area2D"]
+position = Vector2(1.15302, -1.8513)
+polygon = PackedVector2Array(-34.5816, -34.9302, -1.95744, 21.5226, 30.6667, -34.9302, 12.1707, -34.9302)
+
+[node name="obstacle6" type="Sprite2D" parent="obstacles"]
+position = Vector2(152.031, 376.627)
+rotation = -0.593412
+scale = Vector2(0.766304, 0.737968)
+texture = ExtResource("4_ph0n2")
+
+[node name="Area2D" type="Area2D" parent="obstacles/obstacle6" groups=["level_11_obstacle"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="obstacles/obstacle6/Area2D"]
+position = Vector2(0.729736, -1.12346)
+polygon = PackedVector2Array(-34.5816, -34.9302, -1.95744, 21.5226, 30.6667, -34.9302, 12.1707, -34.9302)
+
+[node name="obstacle7" type="Sprite2D" parent="obstacles"]
+position = Vector2(155.031, 424.627)
+rotation = -0.593412
+scale = Vector2(0.766304, 0.737968)
+texture = ExtResource("4_ph0n2")
+
+[node name="Area2D" type="Area2D" parent="obstacles/obstacle7" groups=["level_11_obstacle"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="obstacles/obstacle7/Area2D"]
+position = Vector2(-1.08188, -0.757706)
+polygon = PackedVector2Array(-34.5816, -34.9302, -1.95744, 21.5226, 30.6667, -34.9302, 12.1707, -34.9302)
+
+[node name="obstacle8" type="Sprite2D" parent="obstacles"]
+position = Vector2(158.031, 472.627)
+rotation = -0.593412
+scale = Vector2(0.766304, 0.737968)
+texture = ExtResource("4_ph0n2")
+
+[node name="Area2D" type="Area2D" parent="obstacles/obstacle8" groups=["level_11_obstacle"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="obstacles/obstacle8/Area2D"]
+position = Vector2(4.57764e-05, -1.52588e-05)
+polygon = PackedVector2Array(-34.5816, -34.9302, -1.95744, 21.5226, 30.6667, -34.9302, 12.1707, -34.9302)
+
+[node name="obstacle9" type="Sprite2D" parent="obstacles"]
+position = Vector2(321, 251)
+rotation = -0.593412
+scale = Vector2(0.766304, 0.737968)
+texture = ExtResource("4_ph0n2")
+
+[node name="Area2D" type="Area2D" parent="obstacles/obstacle9" groups=["level_11_obstacle"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="obstacles/obstacle9/Area2D"]
+position = Vector2(0.377518, -3.00441)
+polygon = PackedVector2Array(-34.5816, -34.9302, -1.95744, 21.5226, 30.6667, -34.9302, 12.1707, -34.9302)
+
+[node name="obstacle10" type="Sprite2D" parent="obstacles"]
+position = Vector2(363, 248)
+rotation = -0.593412
+scale = Vector2(0.766304, 0.737968)
+texture = ExtResource("4_ph0n2")
+
+[node name="Area2D" type="Area2D" parent="obstacles/obstacle10" groups=["level_11_obstacle"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="obstacles/obstacle10/Area2D"]
+position = Vector2(-1.08186, -0.757767)
+polygon = PackedVector2Array(-34.5816, -34.9302, -1.95744, 21.5226, 30.6667, -34.9302, 12.1707, -34.9302)
+
+[node name="obstacle11" type="Sprite2D" parent="obstacles"]
+position = Vector2(405, 247)
+rotation = -0.593412
+scale = Vector2(0.766304, 0.737968)
+texture = ExtResource("4_ph0n2")
+
+[node name="Area2D" type="Area2D" parent="obstacles/obstacle11" groups=["level_11_obstacle"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="obstacles/obstacle11/Area2D"]
+position = Vector2(0.729675, -1.12337)
+polygon = PackedVector2Array(-34.5816, -34.9302, -1.95744, 21.5226, 30.6667, -34.9302, 12.1707, -34.9302)
+
+[node name="obstacle12" type="Sprite2D" parent="obstacles"]
+position = Vector2(448, 246)
+rotation = -0.593412
+scale = Vector2(0.766304, 0.737968)
+texture = ExtResource("4_ph0n2")
+
+[node name="Area2D" type="Area2D" parent="obstacles/obstacle12" groups=["level_11_obstacle"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="obstacles/obstacle12/Area2D"]
+position = Vector2(-0.352112, -1.88118)
+polygon = PackedVector2Array(-34.5816, -34.9302, -1.95744, 21.5226, 30.6667, -34.9302, 12.1707, -34.9302)
+
+[connection signal="area_entered" from="player/Area2D" to="player" method="_on_area_2d_area_entered"]

@@ -1,0 +1,154 @@
+[gd_scene load_steps=13 format=3 uid="uid://ct07giaspp3ac"]
+
+[ext_resource type="Texture2D" uid="uid://chjjltsvfcc7o" path="res://bg3.png" id="1_0cm5x"]
+[ext_resource type="Script" path="res://menu.gd" id="1_dmm2h"]
+[ext_resource type="Texture2D" uid="uid://cjf8a2m203jrn" path="res://realspaceman.png" id="2_7wx08"]
+[ext_resource type="Script" path="res://hover_animation.gd" id="3_7f7n7"]
+[ext_resource type="Script" path="res://background_movement.gd" id="3_dx5em"]
+[ext_resource type="Texture2D" uid="uid://dh74cjnh6uofi" path="res://medium/play_button.png" id="3_vqyns"]
+[ext_resource type="Script" path="res://instruction.gd" id="4_ocwfw"]
+[ext_resource type="AudioStream" uid="uid://dcsn4eeflaw2u" path="res://space-trip-114102.mp3" id="7_qtl4r"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t7iop"]
+font_size = 100
+font_color = Color(0.482353, 0, 0.227451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xm7kc"]
+bg_color = Color(0.137255, 0.145098, 0.0470588, 0.419608)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.439216, 0.207843, 0.145098, 0.6)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qww8j"]
+bg_color = Color(0.305882, 0.227451, 0.0470588, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 15
+shadow_color = Color(0.619608, 0.619608, 0.619608, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aj1w5"]
+bg_color = Color(0.435294, 0.678431, 0.282353, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 15
+shadow_color = Color(0.678431, 0.678431, 0.678431, 0.6)
+shadow_size = 5
+
+[node name="Gui" type="Node2D"]
+script = ExtResource("1_dmm2h")
+
+[node name="Frame" type="MarginContainer" parent="."]
+offset_right = 1153.0
+offset_bottom = 360.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Frame"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Frame/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_0cm5x")
+
+[node name="Frame2" type="MarginContainer" parent="."]
+offset_top = 290.0
+offset_right = 1153.0
+offset_bottom = 650.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Frame2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Frame2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_0cm5x")
+stretch_mode = 6
+flip_h = true
+
+[node name="title" type="MarginContainer" parent="."]
+offset_top = 87.0
+offset_right = 1129.0
+offset_bottom = 266.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="title"]
+layout_mode = 2
+
+[node name="Space_of_hell" type="Label" parent="title/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "The Spaceman"
+label_settings = SubResource("LabelSettings_t7iop")
+horizontal_alignment = 1
+
+[node name="Play" type="MarginContainer" parent="."]
+offset_left = 442.0
+offset_top = 225.0
+offset_right = 716.0
+offset_bottom = 492.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Play"]
+layout_mode = 2
+alignment = 1
+
+[node name="play" type="Button" parent="Play/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Play"
+theme_override_colors/font_color = Color(0.792157, 0.898039, 0.898039, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_xm7kc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qww8j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_aj1w5")
+icon = ExtResource("3_vqyns")
+flat = true
+script = ExtResource("3_7f7n7")
+
+[node name="Instruction" type="MarginContainer" parent="."]
+offset_left = 315.0
+offset_top = 518.0
+offset_right = 826.0
+offset_bottom = 606.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Instruction"]
+layout_mode = 2
+
+[node name="instruction" type="Button" parent="Instruction/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Help"
+theme_override_colors/font_color = Color(0.792157, 0.898039, 0.898039, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_xm7kc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qww8j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_aj1w5")
+text = "Help"
+script = ExtResource("4_ocwfw")
+
+[node name="rotating_obj" type="Sprite2D" parent="."]
+position = Vector2(973, 340)
+texture = ExtResource("2_7wx08")
+script = ExtResource("3_dx5em")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_qtl4r")
+autoplay = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 48.0
+offset_top = 266.0
+offset_right = 331.0
+offset_bottom = 441.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "You should play 
+HARD MODE!"
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="Play/VBoxContainer/play" to="Play/VBoxContainer/play" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Play/VBoxContainer/play" to="Play/VBoxContainer/play" method="_on_mouse_exited"]
+[connection signal="pressed" from="Play/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="Instruction/VBoxContainer/instruction" to="Instruction/VBoxContainer/instruction" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Instruction/VBoxContainer/instruction" to="Instruction/VBoxContainer/instruction" method="_on_mouse_exited"]
+[connection signal="pressed" from="Instruction/VBoxContainer/instruction" to="." method="_on_instruction_pressed"]

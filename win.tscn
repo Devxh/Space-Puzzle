@@ -32,8 +32,8 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.141176, 0.301961, 0.14902, 1)
 theme_override_font_sizes/font_size = 100
 text = "Congratulations!
- You complete 
-        it and won it!"
+   You complete 
+    it and won it!"
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 offset_left = 104.0
@@ -75,15 +75,15 @@ offset_bottom = 4162.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hum7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Panel"]
-position = Vector2(445, 455)
+position = Vector2(461, 483)
 texture = ExtResource("2_saeiu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Panel"]
-position = Vector2(542, 494)
+position = Vector2(551, 526)
 texture = ExtResource("3_f7qt1")
 
 [node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Panel"]
-position = Vector2(650, 431)
+position = Vector2(703, 477)
 texture = ExtResource("4_j437s")
 
 [node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Panel"]

@@ -15,8 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://nsouxvfrlcny" path="res://arrow-removebg-preview.png" id="9_884ld"]
 [ext_resource type="Texture2D" uid="uid://xu5y27dpakdp" path="res://gunpowder-removebg-preview.png" id="9_y355k"]
 [ext_resource type="Script" path="res://Gunpowder.gd" id="10_r23ly"]
-[ext_resource type="Texture2D" uid="uid://bwgc8q1y6lrew" path="res://fuel-removebg-preview.png" id="13_g1857"]
 [ext_resource type="Script" path="res://queue_free.gd" id="14_dsc8u"]
+[ext_resource type="Texture2D" uid="uid://st56v07mis8y" path="res://medium/fuel-removebg-preview.png" id="15_muxaq"]
 [ext_resource type="Texture2D" uid="uid://dxsel8uicl0m6" path="res://spacedoor-removebg-preview.png" id="17_iyps7"]
 [ext_resource type="Texture2D" uid="uid://chjjltsvfcc7o" path="res://bg3.png" id="18_3bljp"]
 [ext_resource type="AudioStream" uid="uid://dut00owxt8jcb" path="res://blockbuster-logo-13085.mp3" id="19_6lt8b"]
@@ -1975,7 +1975,7 @@ offset_left = 782.0
 offset_top = 10.0
 offset_right = 857.0
 offset_bottom = 78.0
-texture = ExtResource("13_g1857")
+texture = ExtResource("15_muxaq")
 expand_mode = 1
 
 [node name="Label3" type="Label" parent="CanvasLayer"]
@@ -2071,7 +2071,7 @@ polygon = PackedVector2Array(-17, -25, -17, -20, -7, -8, -1, -7, 17, -21, 18, -2
 [node name="Fuel" type="Sprite2D" parent="Fuels"]
 position = Vector2(-1706, 175)
 scale = Vector2(0.38587, 0.323529)
-texture = ExtResource("13_g1857")
+texture = ExtResource("15_muxaq")
 script = ExtResource("14_dsc8u")
 
 [node name="Area2D" type="Area2D" parent="Fuels/Fuel"]
@@ -2082,7 +2082,7 @@ polygon = PackedVector2Array(-46.6475, -61.8182, -46.6475, 9.27277, 12.958, 9.27
 [node name="Fuel2" type="Sprite2D" parent="Fuels"]
 position = Vector2(-1902, 592)
 scale = Vector2(0.38587, 0.323529)
-texture = ExtResource("13_g1857")
+texture = ExtResource("15_muxaq")
 script = ExtResource("14_dsc8u")
 
 [node name="Area2D" type="Area2D" parent="Fuels/Fuel2"]
@@ -2094,7 +2094,7 @@ polygon = PackedVector2Array(-46.6475, -61.8182, -46.6475, 9.27277, 12.958, 9.27
 [node name="Fuel3" type="Sprite2D" parent="Fuels"]
 position = Vector2(-1958, 584)
 scale = Vector2(0.38587, 0.323529)
-texture = ExtResource("13_g1857")
+texture = ExtResource("15_muxaq")
 script = ExtResource("14_dsc8u")
 
 [node name="Area2D" type="Area2D" parent="Fuels/Fuel3"]
@@ -2106,7 +2106,7 @@ polygon = PackedVector2Array(-46.6475, -61.8182, -46.6475, 9.27277, 12.958, 9.27
 [node name="Fuel4" type="Sprite2D" parent="Fuels"]
 position = Vector2(-2010, 587)
 scale = Vector2(0.38587, 0.323529)
-texture = ExtResource("13_g1857")
+texture = ExtResource("15_muxaq")
 script = ExtResource("14_dsc8u")
 
 [node name="Area2D" type="Area2D" parent="Fuels/Fuel4"]
@@ -2118,7 +2118,7 @@ polygon = PackedVector2Array(-46.6475, -61.8182, -46.6475, 9.27277, 12.958, 9.27
 [node name="Fuel5" type="Sprite2D" parent="Fuels"]
 position = Vector2(-1923, 558)
 scale = Vector2(0.38587, 0.323529)
-texture = ExtResource("13_g1857")
+texture = ExtResource("15_muxaq")
 script = ExtResource("14_dsc8u")
 
 [node name="Area2D" type="Area2D" parent="Fuels/Fuel5"]

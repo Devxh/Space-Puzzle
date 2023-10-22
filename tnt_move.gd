@@ -27,3 +27,4 @@ func _on_area_2d_area_entered(_area):
 
 func _on_area_2d_area_shape_entered(_area_rid, _area, _area_shape_index, _local_shape_index):
 	pass # Replace with function body.
+

@@ -1,0 +1,136 @@
+[gd_scene load_steps=7 format=3 uid="uid://br07tdn6hptt1"]
+
+[ext_resource type="Script" path="res://guide.gd" id="1_h6l65"]
+[ext_resource type="Texture2D" uid="uid://chjjltsvfcc7o" path="res://bg3.png" id="1_immua"]
+[ext_resource type="Texture2D" uid="uid://chhsd22ajrlxd" path="res://reinforcedeepslate.png" id="2_kmief"]
+[ext_resource type="Texture2D" uid="uid://d2n0wonkb3axi" path="res://control_key-removebg-preview.png" id="3_jmst2"]
+[ext_resource type="AudioStream" uid="uid://dcsn4eeflaw2u" path="res://space-trip-114102.mp3" id="5_2myjo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dh6gy"]
+bg_color = Color(0.886275, 0.247059, 0.27451, 0.152941)
+
+[node name="guide" type="Node2D"]
+script = ExtResource("1_h6l65")
+
+[node name="Frame" type="MarginContainer" parent="."]
+offset_right = 1153.0
+offset_bottom = 360.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Frame"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Frame/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_immua")
+
+[node name="Frame2" type="MarginContainer" parent="."]
+offset_top = 290.0
+offset_right = 1153.0
+offset_bottom = 650.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Frame2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Frame2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_immua")
+stretch_mode = 6
+flip_h = true
+
+[node name="Panel_bg" type="MarginContainer" parent="."]
+offset_left = 61.0
+offset_top = 48.0
+offset_right = 1093.0
+offset_bottom = 275.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel_bg"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel_bg/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_kmief")
+flip_h = true
+
+[node name="Panel_bg2" type="MarginContainer" parent="."]
+offset_left = 61.0
+offset_top = 270.0
+offset_right = 1093.0
+offset_bottom = 496.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel_bg2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel_bg2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_kmief")
+flip_h = true
+flip_v = true
+
+[node name="Panel_bg3" type="MarginContainer" parent="."]
+offset_left = 61.0
+offset_top = 383.0
+offset_right = 1093.0
+offset_bottom = 608.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel_bg3"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel_bg3/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_kmief")
+flip_h = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+offset_left = 134.0
+offset_top = 91.0
+offset_right = 287.0
+offset_bottom = 206.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Key control:"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578, 156)
+scale = Vector2(1.42935, 1.35963)
+texture = ExtResource("3_jmst2")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 129.0
+offset_top = 305.0
+offset_right = 1070.0
+offset_bottom = 450.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "This a challenging game. 
+All levels is possible. "
+
+[node name="Back" type="MarginContainer" parent="."]
+offset_left = 870.0
+offset_top = 551.0
+offset_right = 1050.0
+offset_bottom = 626.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Back"]
+layout_mode = 2
+
+[node name="back" type="Button" parent="Back/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_dh6gy")
+text = "Back"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_2myjo")
+autoplay = true
+
+[connection signal="pressed" from="Back/VBoxContainer/back" to="." method="_on_back_pressed"]

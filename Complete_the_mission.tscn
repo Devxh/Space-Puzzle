@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://Mission.gd" id="1_tkhg0"]
 [ext_resource type="Script" path="res://player.gd" id="1_w7dg5"]
 [ext_resource type="Texture2D" uid="uid://cjf8a2m203jrn" path="res://realspaceman.png" id="2_ej4t3"]
-[ext_resource type="Texture2D" uid="uid://bwgc8q1y6lrew" path="res://fuel-removebg-preview.png" id="2_klmmd"]
 [ext_resource type="Script" path="res://camera.gd" id="3_ep42l"]
+[ext_resource type="Texture2D" uid="uid://st56v07mis8y" path="res://medium/fuel-removebg-preview.png" id="3_nrk44"]
 [ext_resource type="Texture2D" uid="uid://4hpfg5kmoi28" path="res://rainbow_ore-removebg-preview.png" id="3_xpmcb"]
 [ext_resource type="Texture2D" uid="uid://bcyq55lw3yoww" path="res://blood_stone-removebg-preview.png" id="4_ab3p0"]
 [ext_resource type="Script" path="res://queue_free.gd" id="8_72ani"]
@@ -5264,7 +5264,7 @@ offset_left = 142.0
 offset_top = 38.0
 offset_right = 230.0
 offset_bottom = 121.0
-texture = ExtResource("2_klmmd")
+texture = ExtResource("3_nrk44")
 expand_mode = 1
 
 [node name="rainbow_ore_texture" type="TextureRect" parent="Mission"]
@@ -5321,7 +5321,7 @@ shape = SubResource("RectangleShape2D_m7ujx")
 [node name="Fuel" type="Sprite2D" parent="Fuels_Rainbow_ores_blood_stone_portal"]
 position = Vector2(1364, 793)
 scale = Vector2(0.586957, 0.574866)
-texture = ExtResource("2_klmmd")
+texture = ExtResource("3_nrk44")
 script = ExtResource("8_72ani")
 
 [node name="fuel" type="Area2D" parent="Fuels_Rainbow_ores_blood_stone_portal/Fuel"]
@@ -5333,7 +5333,7 @@ polygon = PackedVector2Array(-64.7408, -73.4954, -54.5186, -73.4954, -46.0001, -
 [node name="Fuel2" type="Sprite2D" parent="Fuels_Rainbow_ores_blood_stone_portal"]
 position = Vector2(3787, 375)
 scale = Vector2(0.586957, 0.574866)
-texture = ExtResource("2_klmmd")
+texture = ExtResource("3_nrk44")
 script = ExtResource("8_72ani")
 
 [node name="fuel" type="Area2D" parent="Fuels_Rainbow_ores_blood_stone_portal/Fuel2"]
@@ -5345,7 +5345,7 @@ polygon = PackedVector2Array(-64.7408, -73.4954, -54.5186, -73.4954, -46.0001, -
 [node name="Fuel4" type="Sprite2D" parent="Fuels_Rainbow_ores_blood_stone_portal"]
 position = Vector2(4456, 571)
 scale = Vector2(0.586957, 0.574866)
-texture = ExtResource("2_klmmd")
+texture = ExtResource("3_nrk44")
 script = ExtResource("8_72ani")
 
 [node name="fuel" type="Area2D" parent="Fuels_Rainbow_ores_blood_stone_portal/Fuel4"]
@@ -5357,7 +5357,7 @@ polygon = PackedVector2Array(-64.7408, -73.4954, -54.5186, -73.4954, -46.0001, -
 [node name="Fuel3" type="Sprite2D" parent="Fuels_Rainbow_ores_blood_stone_portal"]
 position = Vector2(3966, 978)
 scale = Vector2(0.586957, 0.574866)
-texture = ExtResource("2_klmmd")
+texture = ExtResource("3_nrk44")
 script = ExtResource("8_72ani")
 
 [node name="fuel" type="Area2D" parent="Fuels_Rainbow_ores_blood_stone_portal/Fuel3"]

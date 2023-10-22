@@ -1,0 +1,157 @@
+[gd_scene load_steps=11 format=3 uid="uid://bt5ivcn876alf"]
+
+[ext_resource type="Texture2D" uid="uid://chjjltsvfcc7o" path="res://bg3.png" id="1_dc3gq"]
+[ext_resource type="Script" path="res://level.gd" id="1_vqjlb"]
+[ext_resource type="Script" path="res://easy.gd" id="3_mcx86"]
+[ext_resource type="Texture2D" uid="uid://cjf8a2m203jrn" path="res://realspaceman.png" id="4_ktc8d"]
+[ext_resource type="Script" path="res://background_movement.gd" id="5_gu17n"]
+[ext_resource type="AudioStream" uid="uid://dcsn4eeflaw2u" path="res://space-trip-114102.mp3" id="6_7fjqp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1dbl"]
+bg_color = Color(0.137255, 0.145098, 0.0470588, 0.419608)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.439216, 0.207843, 0.145098, 0.6)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aesjv"]
+bg_color = Color(0.305882, 0.227451, 0.0470588, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 15
+shadow_color = Color(0.619608, 0.619608, 0.619608, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3egos"]
+bg_color = Color(0.435294, 0.678431, 0.282353, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 15
+shadow_color = Color(0.678431, 0.678431, 0.678431, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6o6s7"]
+bg_color = Color(0.619608, 0.419608, 0.713726, 0.152941)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_vqjlb")
+
+[node name="Frame" type="MarginContainer" parent="."]
+offset_right = 1153.0
+offset_bottom = 360.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Frame"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Frame/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_dc3gq")
+
+[node name="Frame2" type="MarginContainer" parent="."]
+offset_top = 290.0
+offset_right = 1153.0
+offset_bottom = 650.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Frame2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Frame2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_dc3gq")
+stretch_mode = 6
+flip_h = true
+
+[node name="easy" type="MarginContainer" parent="."]
+offset_left = 277.0
+offset_top = 84.0
+offset_right = 820.0
+offset_bottom = 153.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="easy"]
+layout_mode = 2
+
+[node name="easy" type="Button" parent="easy/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Play"
+theme_override_colors/font_color = Color(0.792157, 0.898039, 0.898039, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_j1dbl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aesjv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3egos")
+text = "Easy"
+script = ExtResource("3_mcx86")
+
+[node name="Hard" type="MarginContainer" parent="."]
+offset_left = 277.0
+offset_top = 409.0
+offset_right = 820.0
+offset_bottom = 480.0
+
+[node name="hard" type="VBoxContainer" parent="Hard"]
+layout_mode = 2
+
+[node name="hard" type="Button" parent="Hard/hard"]
+layout_mode = 2
+tooltip_text = "Play"
+theme_override_colors/font_color = Color(0.435294, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_j1dbl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aesjv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3egos")
+text = "Hard"
+script = ExtResource("3_mcx86")
+
+[node name="Back" type="MarginContainer" parent="."]
+offset_left = 870.0
+offset_top = 551.0
+offset_right = 1050.0
+offset_bottom = 626.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Back"]
+layout_mode = 2
+
+[node name="back" type="Button" parent="Back/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_6o6s7")
+text = "Back"
+
+[node name="rotating_obj" type="Sprite2D" parent="."]
+position = Vector2(151, 202)
+texture = ExtResource("4_ktc8d")
+script = ExtResource("5_gu17n")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7fjqp")
+autoplay = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 278.0
+offset_top = 245.0
+offset_right = 818.0
+offset_bottom = 327.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="medium" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Play"
+theme_override_colors/font_color = Color(0.937255, 0.858824, 0.784314, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_j1dbl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aesjv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3egos")
+text = "Medium"
+script = ExtResource("3_mcx86")
+
+[connection signal="mouse_entered" from="easy/VBoxContainer/easy" to="easy/VBoxContainer/easy" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="easy/VBoxContainer/easy" to="easy/VBoxContainer/easy" method="_on_mouse_exited"]
+[connection signal="pressed" from="easy/VBoxContainer/easy" to="." method="_on_easy_pressed"]
+[connection signal="mouse_entered" from="Hard/hard/hard" to="Hard/hard/hard" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Hard/hard/hard" to="Hard/hard/hard" method="_on_mouse_exited"]
+[connection signal="pressed" from="Hard/hard/hard" to="." method="_on_hard_pressed"]
+[connection signal="pressed" from="Back/VBoxContainer/back" to="." method="_on_back_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/medium" to="MarginContainer/VBoxContainer/medium" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/medium" to="MarginContainer/VBoxContainer/medium" method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/medium" to="." method="_on_medium_pressed"]

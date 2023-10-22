@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwgc8q1y6lrew"
-path="res://.godot/imported/fuel-removebg-preview.png-e2c65bb68af697c85d375dfa6f3e1000.ctex"
+uid="uid://migiaxt6f4pb"
+path="res://.godot/imported/enemy_medium_2-removebg-preview.png-e757f76573b06c53a238f5ea5c24f9fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fuel-removebg-preview.png"
-dest_files=["res://.godot/imported/fuel-removebg-preview.png-e2c65bb68af697c85d375dfa6f3e1000.ctex"]
+source_file="res://medium/enemy_medium_2-removebg-preview.png"
+dest_files=["res://.godot/imported/enemy_medium_2-removebg-preview.png-e757f76573b06c53a238f5ea5c24f9fd.ctex"]
 
 [params]
 

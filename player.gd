@@ -110,10 +110,64 @@ func _on_area_2d_area_entered(area):
 	if area.is_in_group("practise"):
 		position.x = 0
 		position.y = 0
+	if area.is_in_group("easy_I"):
+		get_tree().change_scene_to_file("res://Easy_ii.tscn")
+	if area.is_in_group("ball"):
+		get_tree().change_scene_to_file("res://easy.tscn")
+	if area.is_in_group("star_obj_easy"):
+		get_tree().change_scene_to_file("res://Easy_ii.tscn")
+	if area.is_in_group("easy_ii"):
+		get_tree().change_scene_to_file("res://easy_iii.tscn")
+	if area.is_in_group("easy_iii_obj"):
+		get_tree().change_scene_to_file("res://easy_iii.tscn")
+	if area.is_in_group("easy_iii_teleporter"):
+		get_tree().change_scene_to_file("res://easy_iv.tscn")
+	if area.is_in_group("easy_iv_obstacle"):
+		get_tree().change_scene_to_file("res://easy_iv.tscn")
+	if area.is_in_group("easy_iv"):
+		get_tree().change_scene_to_file("res://easy_5.tscn")
+	if area.is_in_group("easy_5_obj"):
+		get_tree().change_scene_to_file("res://easy_5.tscn")
+	if area.is_in_group("easy_5"):
+		get_tree().change_scene_to_file("res://easy_6.tscn")
+	if area.is_in_group("easy_6_obj"):
+		get_tree().change_scene_to_file("res://easy_6.tscn")
+	if area.is_in_group("easy_6"):
+		get_tree().change_scene_to_file("res://easy_7.tscn")
+	if area.is_in_group("easy_7_obj"):
+		get_tree().change_scene_to_file("res://easy_7.tscn")
+	if area.is_in_group("easy_7"):
+		get_tree().change_scene_to_file("res://easy_8.tscn")
+	if area.is_in_group("easy_8_obj"):
+		get_tree().change_scene_to_file("res://easy_8.tscn")
+	if area.is_in_group("easy_8"):
+		get_tree().change_scene_to_file("res://easy_9.tscn")
+	if area.is_in_group("easy_9_obj"):
+		get_tree().change_scene_to_file("res://easy_9.tscn")
+	if area.is_in_group("easy_9"):
+		get_tree().change_scene_to_file("res://level_10_easy.tscn")
+	if area.is_in_group("easy_10_obstacle"):
+		get_tree().change_scene_to_file("res://level_10_easy.tscn")
+	if area.is_in_group("level_10"):
+		get_tree().change_scene_to_file("res://menu.tscn")
+	if area.is_in_group("level_11_obstacle"):
+		get_tree().change_scene_to_file("res://level_11_easy.tscn")
+	if area.is_in_group("medium_2_obj"):
+		get_tree().change_scene_to_file("res://menu.tscn")
+	
+	##Medium level
+	if area.is_in_group("medium_1_obj"):
+		get_tree().change_scene_to_file("res://medium_1.tscn")
+	if area.is_in_group("medium_2"):
+		get_tree().change_scene_to_file("res://medium_3.tscn")
+		##MEDIUM STEROTYPES
+	if area.is_in_group("laser_medium_level"):
+		get_tree().change_scene_to_file("res://medium_2.tscn")
 func _on_area_2d_area_exited(_area):
 	position.x = 0
 	position.y = 0
 
 
-func _on_teleporter_area_exited(_area):
-	pass # Replace with function body.
+
+func _on_rolling_ball_area_entered(_area):
+	get_tree().change_scene_to_file("res://medium_1.tscn")

@@ -1,0 +1,213 @@
+[gd_scene load_steps=20 format=3 uid="uid://gq8atfu5n1fd"]
+
+[ext_resource type="Script" path="res://level.gd" id="1_hv4w5"]
+[ext_resource type="Texture2D" uid="uid://chjjltsvfcc7o" path="res://bg3.png" id="2_rrdfq"]
+[ext_resource type="AudioStream" uid="uid://dcsn4eeflaw2u" path="res://space-trip-114102.mp3" id="3_m5mnr"]
+[ext_resource type="Texture2D" uid="uid://5efcnwtw4gyh" path="res://medium/spaceman_medium.png" id="4_yj407"]
+[ext_resource type="Script" path="res://background_movement.gd" id="5_pqvns"]
+[ext_resource type="Script" path="res://easy.gd" id="6_iq4wt"]
+[ext_resource type="Texture2D" uid="uid://b08nt1j8fa8fl" path="res://Sterotype/Sterotype_easy/sterotype_easy.png" id="6_nkhmq"]
+[ext_resource type="Texture2D" uid="uid://dgk0f83s06b63" path="res://medium/backbutton.png" id="7_26k4m"]
+[ext_resource type="Texture2D" uid="uid://duuegv3pwuyi6" path="res://easy/next_button.png" id="8_oc7g3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6o6s7"]
+bg_color = Color(0.619608, 0.419608, 0.713726, 0.152941)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6a787"]
+bg_color = Color(0.137255, 0.145098, 0.0470588, 0.419608)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.439216, 0.207843, 0.145098, 0.6)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhq80"]
+bg_color = Color(0.305882, 0.227451, 0.0470588, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 15
+shadow_color = Color(0.619608, 0.619608, 0.619608, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2ukm"]
+bg_color = Color(0.435294, 0.678431, 0.282353, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 15
+shadow_color = Color(0.678431, 0.678431, 0.678431, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbcpg"]
+bg_color = Color(0.137255, 0.145098, 0.0470588, 0.419608)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.439216, 0.207843, 0.145098, 0.6)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edqto"]
+bg_color = Color(0.305882, 0.227451, 0.0470588, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 15
+shadow_color = Color(0.619608, 0.619608, 0.619608, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trmq4"]
+bg_color = Color(0.435294, 0.678431, 0.282353, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 15
+shadow_color = Color(0.678431, 0.678431, 0.678431, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2bs0u"]
+bg_color = Color(0.137255, 0.145098, 0.0470588, 0.419608)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.439216, 0.207843, 0.145098, 0.6)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rsvx"]
+bg_color = Color(0.305882, 0.227451, 0.0470588, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 15
+shadow_color = Color(0.619608, 0.619608, 0.619608, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hnoih"]
+bg_color = Color(0.435294, 0.678431, 0.282353, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 15
+shadow_color = Color(0.678431, 0.678431, 0.678431, 0.6)
+shadow_size = 5
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_hv4w5")
+
+[node name="Frame" type="MarginContainer" parent="."]
+offset_right = 1153.0
+offset_bottom = 360.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Frame"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Frame/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_rrdfq")
+
+[node name="Frame2" type="MarginContainer" parent="."]
+offset_top = 290.0
+offset_right = 1153.0
+offset_bottom = 650.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Frame2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Frame2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_rrdfq")
+stretch_mode = 6
+flip_h = true
+
+[node name="Back" type="MarginContainer" parent="."]
+offset_left = 870.0
+offset_top = 551.0
+offset_right = 1050.0
+offset_bottom = 626.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Back"]
+layout_mode = 2
+
+[node name="back" type="Button" parent="Back/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_6o6s7")
+text = "Back"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_m5mnr")
+autoplay = true
+
+[node name="spaceman_easy" type="Sprite2D" parent="."]
+position = Vector2(553, 250)
+scale = Vector2(1.67526, 1.61969)
+texture = ExtResource("4_yj407")
+script = ExtResource("5_pqvns")
+
+[node name="Sprite2D" type="Sprite2D" parent="spaceman_easy"]
+position = Vector2(-1.79074, -54.3314)
+scale = Vector2(0.740693, 0.737675)
+texture = ExtResource("6_nkhmq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 278.0
+offset_top = 483.0
+offset_right = 818.0
+offset_bottom = 598.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="sterotype_easy" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Play"
+theme_override_colors/font_color = Color(0.745098, 0.670588, 0.0392157, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_6a787")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yhq80")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r2ukm")
+text = "Sterotype easy
+"
+script = ExtResource("6_iq4wt")
+
+[node name="backward" type="MarginContainer" parent="."]
+offset_left = 45.0
+offset_top = 211.0
+offset_right = 229.0
+offset_bottom = 400.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="backward"]
+layout_mode = 2
+
+[node name="back_medium" type="Button" parent="backward/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Play"
+theme_override_colors/font_color = Color(0.792157, 0.898039, 0.898039, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_gbcpg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_edqto")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_trmq4")
+icon = ExtResource("7_26k4m")
+script = ExtResource("6_iq4wt")
+
+[node name="next" type="MarginContainer" parent="."]
+offset_left = 883.0
+offset_top = 211.0
+offset_right = 1067.0
+offset_bottom = 400.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="next"]
+layout_mode = 2
+
+[node name="next_easy" type="Button" parent="next/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Play"
+theme_override_colors/font_color = Color(0.792157, 0.898039, 0.898039, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_2bs0u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3rsvx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hnoih")
+icon = ExtResource("8_oc7g3")
+script = ExtResource("6_iq4wt")
+
+[connection signal="pressed" from="Back/VBoxContainer/back" to="." method="_on_back_pressed" flags=18]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/sterotype_easy" to="MarginContainer/VBoxContainer/sterotype_easy" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/sterotype_easy" to="MarginContainer/VBoxContainer/sterotype_easy" method="_on_mouse_exited" flags=18]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/sterotype_easy" to="." method="_on_sterotype_easy_pressed"]
+[connection signal="mouse_entered" from="backward/VBoxContainer/back_medium" to="backward/VBoxContainer/back_medium" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="backward/VBoxContainer/back_medium" to="backward/VBoxContainer/back_medium" method="_on_mouse_exited" flags=18]
+[connection signal="pressed" from="backward/VBoxContainer/back_medium" to="." method="_on_back_medium_pressed" flags=18]
+[connection signal="mouse_entered" from="next/VBoxContainer/next_easy" to="next/VBoxContainer/next_easy" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="next/VBoxContainer/next_easy" to="next/VBoxContainer/next_easy" method="_on_mouse_exited" flags=18]
+[connection signal="pressed" from="next/VBoxContainer/next_easy" to="." method="_on_next_easy_pressed" flags=18]
