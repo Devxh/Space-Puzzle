@@ -42,3 +42,5 @@ func _on_sterotype_easy_pressed():
 
 func _on_next_sterotype_pressed():
 	get_tree().change_scene_to_file("res://Sterotype/Sterotype_easy/sterotype_easy.tscn")
+
+

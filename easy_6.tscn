@@ -7,8 +7,8 @@
 [ext_resource type="Script" path="res://player.gd" id="3_3owgt"]
 [ext_resource type="Texture2D" uid="uid://cjf8a2m203jrn" path="res://realspaceman.png" id="4_0kq8d"]
 [ext_resource type="Script" path="res://camera.gd" id="5_ewdtw"]
-[ext_resource type="Texture2D" uid="uid://7ydypqt680pj" path="res://easy/aurora.png" id="8_1itpy"]
 [ext_resource type="AudioStream" uid="uid://ciqx6nkmusv50" path="res://music/lade_of_the_80.mp3" id="8_lemwx"]
+[ext_resource type="Texture2D" uid="uid://b13xhqtv2akdx" path="res://easy/better_space_background.png" id="9_4xpxv"]
 [ext_resource type="Texture2D" uid="uid://bv6dw13g3lplv" path="res://medium/end-removebg-preview.png" id="10_iabvd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fyw0g"]
@@ -5239,9 +5239,9 @@ autoplay = true
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(746.875, 517)
-scale = Vector2(3.45532, 2.26953)
-texture = ExtResource("8_1itpy")
+position = Vector2(677, 223.5)
+scale = Vector2(3.93125, 4.36481)
+texture = ExtResource("9_4xpxv")
 
 [node name="end" type="Sprite2D" parent="."]
 position = Vector2(1518, 294)

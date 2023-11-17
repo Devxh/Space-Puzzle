@@ -12,29 +12,6 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6o6s7"]
 bg_color = Color(0.619608, 0.419608, 0.713726, 0.152941)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6a787"]
-bg_color = Color(0.137255, 0.145098, 0.0470588, 0.419608)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_color = Color(0.439216, 0.207843, 0.145098, 0.6)
-shadow_size = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhq80"]
-bg_color = Color(0.305882, 0.227451, 0.0470588, 1)
-border_color = Color(0.8, 0.8, 0.8, 0)
-corner_detail = 15
-shadow_color = Color(0.619608, 0.619608, 0.619608, 0.6)
-shadow_size = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2ukm"]
-bg_color = Color(0.435294, 0.678431, 0.282353, 1)
-border_color = Color(0.8, 0.8, 0.8, 0)
-corner_detail = 15
-shadow_color = Color(0.678431, 0.678431, 0.678431, 0.6)
-shadow_size = 5
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67660"]
 bg_color = Color(0.137255, 0.145098, 0.0470588, 0.419608)
 corner_radius_top_left = 15
@@ -52,6 +29,29 @@ shadow_color = Color(0.619608, 0.619608, 0.619608, 0.6)
 shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgfd8"]
+bg_color = Color(0.435294, 0.678431, 0.282353, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 15
+shadow_color = Color(0.678431, 0.678431, 0.678431, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgjy6"]
+bg_color = Color(0.137255, 0.145098, 0.0470588, 0.419608)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.439216, 0.207843, 0.145098, 0.6)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i40tc"]
+bg_color = Color(0.305882, 0.227451, 0.0470588, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_detail = 15
+shadow_color = Color(0.619608, 0.619608, 0.619608, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brohq"]
 bg_color = Color(0.435294, 0.678431, 0.282353, 1)
 border_color = Color(0.8, 0.8, 0.8, 0)
 corner_detail = 15
@@ -111,26 +111,6 @@ scale = Vector2(1.67526, 1.61969)
 texture = ExtResource("4_klwdj")
 script = ExtResource("6_snb50")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-offset_left = 278.0
-offset_top = 483.0
-offset_right = 818.0
-offset_bottom = 598.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="medium" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-tooltip_text = "Play"
-theme_override_colors/font_color = Color(0.513726, 0.384314, 0.247059, 1)
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_6a787")
-theme_override_styles/hover = SubResource("StyleBoxFlat_yhq80")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_r2ukm")
-text = "Medium"
-script = ExtResource("3_0iiyo")
-
 [node name="next" type="MarginContainer" parent="."]
 offset_left = 883.0
 offset_top = 211.0
@@ -171,13 +151,44 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_xgfd8")
 icon = ExtResource("8_kum6f")
 script = ExtResource("3_0iiyo")
 
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "c"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+offset_left = 278.0
+offset_top = 483.0
+offset_right = 818.0
+offset_bottom = 598.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="medium" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "Play"
+theme_override_colors/font_color = Color(0.517647, 0.513726, 0.258824, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_xgjy6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i40tc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_brohq")
+text = "Medium"
+script = ExtResource("3_0iiyo")
+
 [connection signal="pressed" from="Back/VBoxContainer/back" to="." method="_on_back_pressed" flags=18]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/medium" to="MarginContainer/VBoxContainer/medium" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/medium" to="MarginContainer/VBoxContainer/medium" method="_on_mouse_exited"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/medium" to="." method="_on_medium_pressed"]
 [connection signal="mouse_entered" from="next/VBoxContainer/next_hard" to="next/VBoxContainer/next_hard" method="_on_mouse_entered" flags=18]
 [connection signal="mouse_exited" from="next/VBoxContainer/next_hard" to="next/VBoxContainer/next_hard" method="_on_mouse_exited" flags=18]
 [connection signal="pressed" from="next/VBoxContainer/next_hard" to="." method="_on_next_hard_pressed"]
 [connection signal="mouse_entered" from="backward/VBoxContainer/back_easy" to="backward/VBoxContainer/back_easy" method="_on_mouse_entered" flags=18]
 [connection signal="mouse_exited" from="backward/VBoxContainer/back_easy" to="backward/VBoxContainer/back_easy" method="_on_mouse_exited" flags=18]
 [connection signal="pressed" from="backward/VBoxContainer/back_easy" to="." method="_on_back_easy_pressed"]
+[connection signal="mouse_entered" from="MarginContainer2/VBoxContainer/medium" to="MarginContainer2/VBoxContainer/medium" method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="MarginContainer2/VBoxContainer/medium" to="MarginContainer2/VBoxContainer/medium" method="_on_mouse_exited" flags=18]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/medium" to="." method="_on_medium_pressed"]

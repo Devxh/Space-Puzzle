@@ -19,7 +19,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
-text = "Don`t give up I know it is hard"
+text = "                    Almost!"
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 offset_left = 288.0

@@ -106,7 +106,7 @@ func _on_area_2d_area_entered(area):
 	if area.is_in_group("hard_blade"):
 		get_tree().change_scene_to_file("res://hard_dead_message.tscn")
 	if area.is_in_group("hard_I_teleport"):
-		get_tree().change_scene_to_file("res://win.tscn")
+		get_tree().change_scene_to_file("res://menu.tscn")
 	if area.is_in_group("practise"):
 		position.x = 0
 		position.y = 0
@@ -159,7 +159,7 @@ func _on_area_2d_area_entered(area):
 	if area.is_in_group("medium_1_obj"):
 		get_tree().change_scene_to_file("res://medium_1.tscn")
 	if area.is_in_group("medium_2"):
-		get_tree().change_scene_to_file("res://medium_3.tscn")
+		get_tree().change_scene_to_file("res://Sterotype/Sterotype_easy/sterotype_easy__2.tscn")
 		##MEDIUM STEROTYPES
 	if area.is_in_group("laser_medium_level"):
 		get_tree().change_scene_to_file("res://medium_2.tscn")

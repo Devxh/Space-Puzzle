@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bojswvyi2aslb" path="res://medium/rolling_ball.png" id="13_17yi1"]
 [ext_resource type="Script" path="res://rolling_ball.gd" id="14_kfefk"]
 [ext_resource type="Script" path="res://queue_free.gd" id="15_m8j0x"]
-[ext_resource type="Texture2D" uid="uid://b7o4fdracunku" path="res://medium/complex_number_background.jpg" id="17_q5p41"]
+[ext_resource type="Texture2D" uid="uid://bggqgykonyos8" path="res://easy/universe_background.png" id="16_c73mi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikpxe"]
 size = Vector2(201.748, 117.779)
@@ -5558,9 +5558,9 @@ position = Vector2(-16.0299, -203.408)
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(562, 1139)
-scale = Vector2(6.98, 11.262)
-texture = ExtResource("17_q5p41")
+position = Vector2(544, 1175)
+scale = Vector2(4.60406, 5.87452)
+texture = ExtResource("16_c73mi")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 

@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://i35yy4sly8ls"]
+
+[ext_resource type="Script" path="res://number_level/level_selection_easy.gd" id="1_ruoqu"]
+[ext_resource type="Texture2D" uid="uid://chjjltsvfcc7o" path="res://bg3.png" id="1_yku3g"]
+[ext_resource type="Texture2D" uid="uid://sxtbqo5baji8" path="res://number_level/level_1-removebg-preview.png" id="2_2lh8a"]
+
+[node name="level_selection_easy" type="Node2D"]
+script = ExtResource("1_ruoqu")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_yku3g")
+
+[node name="level" type="Node" parent="."]
+
+[node name="level_1" type="MarginContainer" parent="level"]
+offset_right = 192.0
+offset_bottom = 195.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="level/level_1"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="level/level_1/VBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+icon = ExtResource("2_2lh8a")
+flat = true
+
+[node name="CheckBox" type="CheckBox" parent="."]
+offset_left = 260.0
+offset_right = 367.0
+offset_bottom = 31.0
+text = "Fullscreen"
+
+[connection signal="toggled" from="CheckBox" to="." method="_on_check_box_toggled"]

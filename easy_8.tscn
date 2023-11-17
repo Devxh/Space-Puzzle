@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://player.gd" id="4_85pbj"]
 [ext_resource type="Texture2D" uid="uid://cjf8a2m203jrn" path="res://realspaceman.png" id="5_jock4"]
 [ext_resource type="Script" path="res://camera.gd" id="6_dw6r7"]
-[ext_resource type="Texture2D" uid="uid://hh4jx6s6fjl4" path="res://easy/galaxy_background.jpg" id="7_r4skl"]
+[ext_resource type="Texture2D" uid="uid://b13xhqtv2akdx" path="res://easy/better_space_background.png" id="7_nrvxf"]
 [ext_resource type="AudioStream" uid="uid://dpp7kvf48mmek" path="res://music/hero_ascend.mp3" id="8_fm3i8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3cju"]
@@ -4429,9 +4429,9 @@ shape = SubResource("RectangleShape2D_ygylb")
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(1376, -235)
-scale = Vector2(7.58857, 5.96986)
-texture = ExtResource("7_r4skl")
+position = Vector2(1340, 169)
+scale = Vector2(6.65208, 7.46667)
+texture = ExtResource("7_nrvxf")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_fm3i8")
