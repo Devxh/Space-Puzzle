@@ -1,5 +1,5 @@
 # Information
-This is a puzzle journey type game which player can only control using key W,A,S,D. 
+This is a puzzle journey type game which player can only control using key W,A,S,D
 #
 All levels from easy to hard is possible
 
