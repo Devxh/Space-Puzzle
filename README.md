@@ -3,7 +3,7 @@ This is a puzzle journey type game which player can move only with key W,A,S,D.
 #
 All levels from easy to hard is possible
 
-# Main Run
+# Download
 Go to tags and click V1
 #
 Download:
