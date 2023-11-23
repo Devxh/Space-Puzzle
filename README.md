@@ -6,10 +6,11 @@ All levels from easy to hard is possible
 # Download
 Go to tags and click V1
 #
-Download:
-The_spaceman2.exe
+Download in https://github.com/Devxh/Space-Puzzle/releases:
+
+Space_puzzle.exe
 #
-The_spaceman2.pck
+Space_puzzle.pck
 
 # This is just a game play guide
 https://youtu.be/H4ctFFkANqg
